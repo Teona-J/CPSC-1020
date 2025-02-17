@@ -1,0 +1,10 @@
+all: main.out
+
+run: main.out
+	./main.out
+
+main.out: main.cpp invoice.cpp person.cpp vehicle.cpp
+		g++ -Wall main.cpp invoice.cpp person.cpp vehicle.cpp -o main.out
+
+clean:
+		rm -f main.out
