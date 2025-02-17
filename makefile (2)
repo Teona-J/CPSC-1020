@@ -1,0 +1,11 @@
+compile:	lab9.c init.c menu.c defs.h
+	gcc -Wall lab9.c init.c menu.c defs.h 
+
+#run has dependency: a.out
+#a.out comes from the first line, the compilation
+
+run: a.out
+	./a.out < pizzas.txt
+
+clean:
+	rm -f *.o

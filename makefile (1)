@@ -1,0 +1,12 @@
+lab8.out:	lab8.c initialize.c getPayment.c affordability.c defs.h
+			gcc -Wall -o lab8.out lab8.c initialize.c getPayment.c affordability.c defs.h -lm
+
+#run has dependency: lab8.out
+#lab8.out comes from the first line, the compilation
+
+run:	lab8.out
+		./lab8.out < affordable.txt
+
+clean: 
+		rm -f *.o
+		
